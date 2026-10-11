@@ -1,0 +1,87 @@
+1:
+		Scanner sc = new Scanner(System.in);
+		int a , b;
+		int  povrsina;
+		int obim;
+		System.out.println("unesi duzinu stranice a");
+		System.out.println("unesi duzinu stranice b");
+		a=sc.nextInt();
+		b=sc.nextInt();
+		povrsina=a*b;
+		obim=2*(a+b);
+		
+	System.out.println("povrsina pravougaonika je:" +povrsina);
+	System.out.println("obim pravougaonika je:" +obim);
+	sc.close();
+	
+
+
+2:
+
+	Scanner sc = new Scanner(System.in);
+	double sirina, visina;
+	double povrsina;
+	System.out.print("unesite sirinu pravaougaonika:");
+	sirina=sc.nextInt();
+	System.out.println("unesite visinu pravouagonika:");
+	visina=sc.nextInt();
+
+	povrsina=sirina*visina/100.0;
+	 
+	if (sirina<=0 || visina<=0) {
+		System.out.println("pogresan unos");
+	}
+	else {
+		System.out.println("povrsina pravougaonika je:" +povrsina +"cm2");
+		sc.close();
+	}
+	
+
+3:
+		Scanner sc= new Scanner(System.in);
+		System.out.println("unesi duzinu povrsinu stonjaka m2:");
+		double P = sc.nextDouble();
+		 double r = Math.sqrt(P / Math.PI);   // poluprečnik
+	        double O = 2 * Math.PI * r;          // obim kruga = dužina trake
+		
+	        System.out.println("Poluprečnik je " + r + " m");
+	        System.out.println("Potrebna dužina trake je " + O + " m");
+
+	        sc.close();
+	        
+
+4:
+		 Scanner sc = new Scanner(System.in);
+
+	        System.out.print("Unesite x koordinatu gornje lijeve ivice: ");
+	        double x1 = sc.nextDouble();
+	        System.out.print("Unesite y koordinatu gornje lijeve ivice: ");
+	        double y1 = sc.nextDouble();
+
+	        System.out.print("Unesite x koordinatu donje desne ivice: ");
+	        double x2 = sc.nextDouble();
+	        System.out.print("Unesite y koordinatu donje desne ivice: ");
+	        double y2 = sc.nextDouble();
+
+	        double sirina = Math.abs(x2 - x1);   // razlika x koordinata
+	        double visina = Math.abs(y2 - y1);   // razlika y koordinata
+
+	        double povrsina = sirina * visina;
+	        double obim = 2 * (sirina + visina);
+
+	        System.out.println("Širina zida je " + sirina);
+	        System.out.println("Visina zida je " + visina);
+	        System.out.println("Površina zida je " + povrsina);
+	        System.out.println("Obim zida je " + obim);
+
+	        sc.close();
+5:
+
+    Scanner sc= new Scanner(System.in);
+     System.out.println("unesi broj kilometara:");
+     double brojkm = sc.nextDouble();
+     int pocetnacijena=1;
+     double pocetnikm=0.5;
+     double cijena= pocetnacijena +(brojkm*pocetnikm);
+     System.out.println("cijena je:" +cijena);
+     sc.close();
