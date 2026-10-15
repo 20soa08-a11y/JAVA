@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class BrokerStanje {
+	
+
+	    public static int izracunajStanje(String unos) {
+	        int stanje = 0;                          
+
+	        String[] trgovine = unos.split(" ");    
+
+	        for (int i = 0; i < trgovine.length; i++) {
+	            String trgovina = trgovine[i];// uzimamo na primjer S50 i stavljamo je u promenljivu ....
+	            char slovo = trgovina.charAt(0);  // ovde uzimamo prvi karakter da bi poslije proverili da li je s ili b   
+	            int iznos = Integer.parseInt(trgovina.substring(1)); 
+
+	            if (slovo == 'S') {
+	                stanje = stanje + iznos;         
+	            } else if (slovo == 'B') {
+	                stanje = stanje - iznos;         
+	            }
+	        }
+
+	        return stanje;
+	    }
+
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.print("Unesite trgovine: ");
+	        String unos = sc.nextLine();
+
+	        int rezultat = izracunajStanje(unos);
+	        System.out.println("Izlaz: " + rezultat);
+
+	        sc.close();
+	    }
+	}
