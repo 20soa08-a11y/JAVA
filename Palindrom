@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Palindrom {
+	
+	    public static boolean jePalindrom(String s) {
+	       
+	        String org = s.toLowerCase().replaceAll("\\s+", "");
+
+	        String obrnuto = new StringBuilder(org).reverse().toString();
+
+	        return org.equals(obrnuto);
+	    }
+
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.print("Unesite riječ: ");
+	        String rijec = sc.nextLine();
+
+	        if (jePalindrom(rijec)) {
+	            System.out.println("\"" + rijec + "\" JESTE palindrom.");
+	        } else {
+	            System.out.println("\"" + rijec + "\" NIJE palindrom.");
+	        }
+
+	        sc.close();
+	    }
+	}
+
