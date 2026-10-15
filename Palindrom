@@ -3,7 +3,7 @@ public class Palindrom {
 	
 	    public static boolean jePalindrom(String s) {
 	       
-	        String org = s.toLowerCase().replaceAll("\\s+", "");
+	        String org = s.toLowerCase().replaceAll("\\s+", ""); // rerplace nam ukljanja space a lover nam kaze da na primjer Ana i ana bude isto 
 
 	        String obrnuto = new StringBuilder(org).reverse().toString();
 
